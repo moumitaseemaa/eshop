@@ -1,5 +1,5 @@
 import React from "react";
-import Container from "../Container";
+import Container from "../commonLayouts/Container";
 import Flex from "../commonLayouts/Flex";
 import TopLeftBar from "./topComponent/TopLeftBar";
 import TopRightBar from "./topComponent/TopRightBar";
