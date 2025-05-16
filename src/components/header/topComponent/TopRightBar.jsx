@@ -54,7 +54,7 @@ const TopRightBar = () => {
           }}
         >
           {countries.map((country, index) => (
-            <option value={country.value}>{country.name}</option>
+            <option key={index} value={country.value}>{country.name}</option>
           ))}
         </select>
 
