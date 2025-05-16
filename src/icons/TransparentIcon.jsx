@@ -7,8 +7,17 @@ const TransparentIcon = ({ width = 40, height = 40, color = "#303030" }) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <path d="M0 3.8147e-06H40V40H0V3.8147e-06Z" fill="white" />
-
+      {/* <mask
+        id="mask0_2_359"
+        style="mask-type:luminance"
+        maskUnits="userSpaceOnUse"
+        x="0"
+        y="0"
+        width="40"
+        height="40"
+      >
+        <path d="M0 3.8147e-06H40V40H0V3.8147e-06Z" fill="white" />
+      </mask> */}
       <g mask="url(#mask0_2_359)">
         <path
           d="M38.4375 20.3125C38.4375 15.1348 36.3388 10.4473 32.9458 7.05422C29.5526 3.66117 24.8651 1.5625 19.6875 1.5625C14.5098 1.5625 9.82232 3.66117 6.4292 7.05422L7.18748 1.5625"
