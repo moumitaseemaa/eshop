@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Flex from "../../commonLayouts/Flex";
 import { FaAngleDown } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
@@ -9,6 +9,8 @@ import { Link } from "react-router-dom";
 const TopRightBar = () => {
   const [selectedCountry, setSelectedCountry] = useState(null);
   const [isPost, setIsPost] = useState(false);
+  const countryRef = useRef(null);
+
   const countries = [
     {
       name: "United State",
@@ -35,15 +37,37 @@ const TopRightBar = () => {
     setIsPost(false);
   };
 
+  // useEffect of CountryNameDropDown
+  useEffect(() => {
+    let handleClickCountryOutSide = (event) => {
+      console.log(countryRef.current.contains(event.target));
+      if (countryRef.current && !countryRef.current.contains(event.target))
+        setIsPost(false);
+    };
+    document.addEventListener("mouseover", handleClickCountryOutSide);
+    return () => {
+      document.removeEventListener("mouseover", handleClickCountryOutSide);
+    };
+  }, []);
+
   return (
     <Flex className={"justify-end items-center gap-x-[50px]"}>
       <div>
         <select name="currency">
           <option value="USD">USD</option>
+          <option value="BDT">EUR</option>
           <option value="BDT">BDT</option>
+          <option value="BDT">AUD</option>
+          <option value="BDT">RUB</option>
+          <option value="BDT">CAD</option>
+          <option value="BDT">INR</option>
+          <option value="BDT">AED</option>
         </select>
       </div>
-      <div className="relative after:absolute after:content-[''] after:bg-[#BFBFBF] after:w-[1px] after:h-[32px] after:left-[-25px] after:top-[50%] after:-translate-y-1/2 before:absolute before:content-[''] before:bg-[#BFBFBF] before:w-[1px] before:h-[32px] before:right-[-25px] before:top-[50%] before:-translate-y-1/2">
+      <div
+        className="relative after:absolute after:content-[''] after:bg-[#BFBFBF] after:w-[1px] after:h-[32px] after:left-[-25px] after:top-[50%] after:-translate-y-1/2 before:absolute before:content-[''] before:bg-[#BFBFBF] before:w-[1px] before:h-[32px] before:right-[-25px] before:top-[50%] before:-translate-y-1/2"
+        ref={countryRef}
+      >
         <select
           className="w-[150px] hidden "
           name="country"
@@ -54,14 +78,16 @@ const TopRightBar = () => {
           }}
         >
           {countries.map((country, index) => (
-            <option key={index} value={country.value}>{country.name}</option>
+            <option key={index} value={country.value}>
+              {country.name}
+            </option>
           ))}
         </select>
 
         {/* custom dropdown */}
         <div
           className={"w-[175px]  p-2 cursor-pointer flex items-center"}
-          onClick={() => setIsPost(!isPost)}
+          onMouseOver={() => setIsPost(!isPost)}
         >
           {selectedCountry ? (
             <>
