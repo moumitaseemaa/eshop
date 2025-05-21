@@ -6,15 +6,19 @@ const Button = ({
   px = "40px",
   fontName = "Montserrat",
   weight = "bold",
+  fontSize = "20px",
   rounded = "10px",
+  border = "transparent",
 }) => {
   return (
     <button
       style={{
         background: bg,
+        border: border,
         color: color,
         padding: `${py} ${px}`,
         fontFamily: fontName,
+        fontSize: fontSize,
         fontWeight: weight,
         borderRadius: rounded,
         cursor: "pointer",

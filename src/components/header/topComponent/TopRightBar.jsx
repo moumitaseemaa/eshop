@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useTransition } from "react";
 import Flex from "../../commonLayouts/Flex";
 import { FaAngleDown } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
@@ -10,6 +10,7 @@ const TopRightBar = () => {
   const [selectedCountry, setSelectedCountry] = useState(null);
   const [isPost, setIsPost] = useState(false);
   const countryRef = useRef(null);
+  // const { t } = useTransition();
 
   const countries = [
     {
@@ -44,9 +45,9 @@ const TopRightBar = () => {
       if (countryRef.current && !countryRef.current.contains(event.target))
         setIsPost(false);
     };
-    document.addEventListener("mouseover", handleClickCountryOutSide);
+    document.addEventListener("mousedown", handleClickCountryOutSide);
     return () => {
-      document.removeEventListener("mouseover", handleClickCountryOutSide);
+      document.removeEventListener("mousedown", handleClickCountryOutSide);
     };
   }, []);
 
@@ -84,10 +85,12 @@ const TopRightBar = () => {
           ))}
         </select>
 
+      
+
         {/* custom dropdown */}
         <div
           className={"w-[175px]  p-2 cursor-pointer flex items-center"}
-          onMouseOver={() => setIsPost(!isPost)}
+          onClick={() => setIsPost(!isPost)}
         >
           {selectedCountry ? (
             <>

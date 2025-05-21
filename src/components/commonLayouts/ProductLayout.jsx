@@ -18,11 +18,10 @@ const ProductLayout = ({
   stockAmount = "50 AVAILABLE",
 }) => {
   const [ratingVal, setRatingVal] = useState(new Array(+rating).fill(rating));
-  console.log(ratingVal);
 
   return (
     <div
-    style={{background:bg}}
+      style={{ background: bg }}
       className={
         "border border-transparent p-6 hover:border-[#CBCBCB] duration-300 rounded-[10px] group"
       }
