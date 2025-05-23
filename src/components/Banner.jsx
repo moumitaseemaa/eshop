@@ -6,7 +6,7 @@ const Banner = () => {
     <div className="mt-[32px] mb-20">
       <Container>
         <Link to={"/"}>
-          <img src="images/banner.png" alt="banner" />
+        <img src="images/banner.png" alt="banner" />
         </Link>
       </Container>
     </div>
