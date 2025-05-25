@@ -14,7 +14,7 @@ function SampleNextArrow(props) {
     <div
       className={className}
       style={{
-        display: "block",
+        // display: "block",
         background: "white",
         width: "40px",
         height: "40px",
@@ -41,7 +41,7 @@ function SamplePrevArrow(props) {
     <div
       className={className}
       style={{
-        display: "block",
+        // display: "block",
         background: "white",
         width: "40px",
         height: "40px",
@@ -83,7 +83,9 @@ const FeaturedProduct = () => {
             Featured Products
           </h2>
           <Flex className="justify-between items-center gap-x-4">
-            <p className="font-['Montserrat'] font-bold text-base text-[#FF624C] leading-6">View All</p>
+            <p className="font-['Montserrat'] font-bold text-base text-[#FF624C] leading-6">
+              View All
+            </p>
             <LongLeftArrow />
           </Flex>
         </Flex>
