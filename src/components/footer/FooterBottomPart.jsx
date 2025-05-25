@@ -22,9 +22,9 @@ const FooterBottomPart = () => {
                   to={"tel:01912384567"}
                   className="absolute left-2 top-1/2 -translate-1/2 "
                 >
-                  <MdOutlinePhone className="size-[20px] hover:text-[#FF624C] duration-400" />
+                  <MdOutlinePhone className="size-[20px] hover:text-[#FF624C] duration-300" />
                 </Link>
-                <span className="hover:text-[#FF624C] duration-400">
+                <span className="hover:text-[#FF624C] duration-300">
                   +1 (555) 123-4567
                 </span>
               </li>
@@ -33,9 +33,9 @@ const FooterBottomPart = () => {
                   to={"mailto:information@eshop.com"}
                   className="absolute left-2 top-1/2 -translate-1/2 "
                 >
-                  <MdEmail className=" size-[20px] hover:text-[#FF624C] duration-400 " />
+                  <MdEmail className=" size-[20px] hover:text-[#FF624C] duration-300 " />
                 </Link>
-                <span className="hover:text-[#FF624C] duration-400">
+                <span className="hover:text-[#FF624C] duration-300">
                   information@eshop.com
                 </span>
               </li>
@@ -44,9 +44,9 @@ const FooterBottomPart = () => {
                   to={"https://maps.app.goo.gl/8z2YEqrA2CYrKGrs5"}
                   className="absolute left-2 top-1/2 -translate-1/2 "
                 >
-                  <LuMapPin className=" size-[20px] hover:text-[#FF624C] duration-400 " />
+                  <LuMapPin className=" size-[20px] hover:text-[#FF624C] duration-300 " />
                 </Link>
-                <span className="hover:text-[#FF624C] duration-400">
+                <span className="hover:text-[#FF624C] duration-300">
                   123 Main Street, Anytown USA
                 </span>
               </li>
@@ -58,27 +58,27 @@ const FooterBottomPart = () => {
             </h4>
             <ul className="font-['Montserrat'] font-normal text-base leading-6 flex flex-col gap-3">
               <li>
-                <Link to={"#"} className="hover:text-[#FF624C] duration-400">
+                <Link to={"#"} className="hover:text-[#FF624C] duration-300">
                   Products List
                 </Link>
               </li>
               <li>
-                <Link to={"#"} className="hover:text-[#FF624C] duration-400">
+                <Link to={"#"} className="hover:text-[#FF624C] duration-300">
                   Order Tracking
                 </Link>
               </li>
               <li>
-                <Link to={"#"} className="hover:text-[#FF624C] duration-400">
+                <Link to={"#"} className="hover:text-[#FF624C] duration-300">
                   Products Guide
                 </Link>
               </li>
               <li>
-                <Link to={"#"} className="hover:text-[#FF624C] duration-400">
+                <Link to={"#"} className="hover:text-[#FF624C] duration-300">
                   Shopping Cart
                 </Link>
               </li>
               <li>
-                <Link to={"#"} className="hover:text-[#FF624C] duration-400">
+                <Link to={"#"} className="hover:text-[#FF624C] duration-300">
                   Tech Blog
                 </Link>
               </li>
@@ -90,32 +90,32 @@ const FooterBottomPart = () => {
             </h4>
             <ul className="font-['Montserrat'] font-normal text-base leading-6 flex flex-col gap-3">
               <li>
-                <Link to={"#"} className="hover:text-[#FF624C] duration-400">
+                <Link to={"#"} className="hover:text-[#FF624C] duration-300">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to={"#"} className="hover:text-[#FF624C] duration-400">
+                <Link to={"#"} className="hover:text-[#FF624C] duration-300">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link to={"#"} className="hover:text-[#FF624C] duration-400">
+                <Link to={"#"} className="hover:text-[#FF624C] duration-300">
                   Return Policy
                 </Link>
               </li>
               <li>
-                <Link to={"#"} className="hover:text-[#FF624C] duration-400">
+                <Link to={"#"} className="hover:text-[#FF624C] duration-300">
                   Help Centre
                 </Link>
               </li>
               <li>
-                <Link to={"#"} className="hover:text-[#FF624C] duration-400">
+                <Link to={"#"} className="hover:text-[#FF624C] duration-300">
                   Store Locations
                 </Link>
               </li>
               <li>
-                <Link to={"#"} className="hover:text-[#FF624C] duration-400">
+                <Link to={"#"} className="hover:text-[#FF624C] duration-300">
                   Careers
                 </Link>
               </li>
@@ -127,37 +127,37 @@ const FooterBottomPart = () => {
             </h4>
             <ul className="font-['Montserrat'] font-normal text-base leading-6 flex flex-col gap-3">
               <li>
-                <Link to={"#"} className="hover:text-[#FF624C] duration-400">
+                <Link to={"#"} className="hover:text-[#FF624C] duration-300">
                   Computers & Tablets
                 </Link>
               </li>
               <li>
-                <Link to={"#"} className="hover:text-[#FF624C] duration-400">
+                <Link to={"#"} className="hover:text-[#FF624C] duration-300">
                   Mobile Phones & Accessories
                 </Link>
               </li>
               <li>
-                <Link to={"#"} className="hover:text-[#FF624C] duration-400">
+                <Link to={"#"} className="hover:text-[#FF624C] duration-300">
                   TV & Home Theater
                 </Link>
               </li>
               <li>
-                <Link to={"#"} className="hover:text-[#FF624C] duration-400">
+                <Link to={"#"} className="hover:text-[#FF624C] duration-300">
                   Audio & Headphones
                 </Link>
               </li>
               <li>
-                <Link to={"#"} className="hover:text-[#FF624C] duration-400">
+                <Link to={"#"} className="hover:text-[#FF624C] duration-300">
                   Cameras & Camcorders
                 </Link>
               </li>
               <li>
-                <Link to={"#"} className="hover:text-[#FF624C] duration-400">
+                <Link to={"#"} className="hover:text-[#FF624C] duration-300">
                   Gaming Equipment
                 </Link>
               </li>
               <li>
-                <Link to={"#"} className="hover:text-[#FF624C] duration-400">
+                <Link to={"#"} className="hover:text-[#FF624C] duration-300">
                   Home Appliances
                 </Link>
               </li>
@@ -177,17 +177,17 @@ const FooterBottomPart = () => {
             </h4>
             <ul className="font-['Montserrat'] font-normal text-base leading-6 flex flex-col gap-3">
               <li>
-                <Link to={"#"} className="hover:text-[#FF624C] duration-400">
+                <Link to={"#"} className="hover:text-[#FF624C] duration-300">
                   Twitter
                 </Link>
               </li>
               <li>
-                <Link to={"#"} className="hover:text-[#FF624C] duration-400">
+                <Link to={"#"} className="hover:text-[#FF624C] duration-300">
                   Instagram
                 </Link>
               </li>
               <li>
-                <Link to={"#"} className="hover:text-[#FF624C] duration-400">
+                <Link to={"#"} className="hover:text-[#FF624C] duration-300">
                   Facebook
                 </Link>
               </li>
@@ -202,15 +202,15 @@ const FooterBottomPart = () => {
         >
           <p>Copyright © 2023 E-Shop. All Rights Reserved.</p>
           <p className="flex  items-center space-x-2">
-            <Link to={"#"} className="hover:text-[#FF624C] duration-400">
+            <Link to={"#"} className="hover:text-[#FF624C] duration-300">
               Privacy Policy
             </Link>
-            <span className="hover:text-[#FF624C] duration-400">|</span>
-            <Link to={"#"} className="hover:text-[#FF624C] duration-400">
+            <span className="hover:text-[#FF624C] duration-300">|</span>
+            <Link to={"#"} className="hover:text-[#FF624C] duration-300">
               Terms & Condition
             </Link>
-            <span className="hover:text-[#FF624C] duration-400">|</span>
-            <Link to={"#"} className="hover:text-[#FF624C] duration-400">
+            <span className="hover:text-[#FF624C] duration-300">|</span>
+            <Link to={"#"} className="hover:text-[#FF624C] duration-300">
               Sitemap
             </Link>
           </p>
