@@ -104,18 +104,18 @@ const TopRightBar = () => {
             </>
           ) : (
             <span className="gap-3 flex items-center">
-              select a country <FaAngleDown />
+              Select a Country <FaAngleDown />
             </span>
           )}
         </div>
 
         {/* option list */}
         {isPost && (
-          <ul className="absolute shadow-lg w-full border border-gray-300 bg-white z-10">
+          <ul className="absolute shadow-xl w-full bg-white z-10">
             {countries.map((country, index) => (
               <li
                 key={country.value}
-                className="flex items-center gap-2 p-2  hover:border-gray-200 cursor-pointer "
+                className="flex items-center gap-2 p-2 border-b border-[#CBCBCB] last:border-hidden hover:bg-gray-300 duration-300 cursor-pointer "
                 onClick={() => handleSelectCountry(country)}
               >
                 <img
