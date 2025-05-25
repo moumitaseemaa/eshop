@@ -58,26 +58,26 @@ const BottomBar = () => {
               <li className="relative" ref={CategoriesDropDownRef}>
                 <button
                   onClick={handleCategoriesDropDownClick}
-                  className="flex items-center gap-x-4"
+                  className="flex gap-x-4"
                 >
                   <FaBars className={"size-[20px] text-[#FFFFFF]"} />
                   All Categories
                   {isCategoriesDroDownOpen && (
                     <div className="w-48 absolute mt-2 top-[20px] left-0 bg-white rounded z-10 shadow-lg ">
-                      <ul className="py-2 font-['Montserrat'] font-bold text-base text-[#000000] leading-6">
-                        <li className="px-4 py-2 hover:bg-gray-200 hover:text-[#FF624C] cursor-pointer">
+                      <ul className="font-['Montserrat'] font-normal text-base text-[#000000] leading-6 text-left">
+                        <li className="border-b border-[#CBCBCB] px-5 py-3  hover:bg-gray-300 hover:text-[#FF624C] duration-300 cursor-pointer">
                           Electronics
                         </li>
-                        <li className="px-4 py-2 hover:bg-gray-200 hover:text-[#FF624C] cursor-pointer">
+                        <li className="border-b border-[#CBCBCB] px-5 py-3  hover:bg-gray-300 hover:text-[#FF624C] duration-300 cursor-pointer">
                           Home Appliances
                         </li>
-                        <li className="px-4 py-2 hover:bg-gray-200 hover:text-[#FF624C] cursor-pointer">
+                        <li className="border-b border-[#CBCBCB] px-5 py-3  hover:bg-gray-300 hover:text-[#FF624C] duration-300 cursor-pointer">
                           Fashion & Clothing
                         </li>
-                        <li className="px-4 py-2 hover:bg-gray-200 hover:text-[#FF624C] cursor-pointer">
+                        <li className="border-b border-[#CBCBCB] px-5 py-3  hover:bg-gray-300 hover:text-[#FF624C] duration-300 cursor-pointer">
                           Sports & Outdoors
                         </li>
-                        <li className="px-4 py-2 hover:bg-gray-200 hover:text-[#FF624C] cursor-pointer">
+                        <li className=" px-5 py-3  hover:bg-gray-300 hover:text-[#FF624C] duration-300 cursor-pointer">
                           Health & Beauty
                         </li>
                       </ul>
@@ -94,21 +94,21 @@ const BottomBar = () => {
                   <FaAngleDown className="size-4 " />
                   {isDroDownOpen && (
                     <div className="w-48 absolute mt-2 top-[20px] left-0 bg-white rounded z-10 shadow-lg ">
-                      <ul className="py-2 font-['Montserrat'] font-bold text-base text-[#000000] leading-6">
-                        <li className="px-4 py-2 hover:bg-gray-200   hover:text-[#FF624C] cursor-pointer">
-                          SmartFit Watch
-                        </li>
-                        <li className="px-4 py-2 hover:bg-gray-200 hover:text-[#FF624C] cursor-pointer">
+                      <ul className="font-['Montserrat'] font-normal text-base text-[#000000] leading-6 text-left">
+                        <li className="border-b border-[#CBCBCB] px-5 py-3  hover:bg-gray-300 hover:text-[#FF624C] duration-300 cursor-pointer">
                           LumiGlow Lamp
                         </li>
-                        <li className="px-4 py-2 hover:bg-gray-200 hover:text-[#FF624C] cursor-pointer">
-                          SwiftCharge
-                        </li>
-                        <li className="px-4 py-2 hover:bg-gray-200 hover:text-[#FF624C] cursor-pointer">
+                        <li className="border-b border-[#CBCBCB] px-5 py-3  hover:bg-gray-300 hover:text-[#FF624C] duration-300 cursor-pointer">
                           EcoBreeze Purifier
                         </li>
-                        <li className="px-4 py-2 hover:bg-gray-200 hover:text-[#FF624C] cursor-pointer">
-                          PureBlend Blender
+                        <li className="border-b border-[#CBCBCB] px-5 py-3  hover:bg-gray-300 hover:text-[#FF624C] duration-300 cursor-pointer">
+                          SwiftCharge
+                        </li>
+                        <li className="border-b border-[#CBCBCB] px-5 py-3  hover:bg-gray-300 hover:text-[#FF624C] duration-300 cursor-pointer">
+                          SmartFit Watch
+                        </li>
+                        <li className=" px-5 py-3  hover:bg-gray-300 hover:text-[#FF624C] duration-300 cursor-pointer">
+                          Pure Blender
                         </li>
                       </ul>
                     </div>
