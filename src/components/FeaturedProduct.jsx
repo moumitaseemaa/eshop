@@ -14,7 +14,6 @@ function SampleNextArrow(props) {
     <div
       className={className}
       style={{
-        // display: "block",
         background: "white",
         width: "40px",
         height: "40px",
@@ -41,7 +40,6 @@ function SamplePrevArrow(props) {
     <div
       className={className}
       style={{
-        // display: "block",
         background: "white",
         width: "40px",
         height: "40px",
