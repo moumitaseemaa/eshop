@@ -47,10 +47,10 @@ const SpringSale = () => {
 
     if (difference < 0) {
       return {
-        days: 0,
-        hours: 0,
-        minutes: 0,
-        seconds: 0,
+        days: "00",
+        hours: "00",
+        minutes: "00",
+        seconds: "00",
       };
     }
 
@@ -93,22 +93,26 @@ const SpringSale = () => {
             <h1 className="font-['Poppins'] font-bold text-[56px] text-[#303030] leading-17">
               Spring Sale
             </h1>
-            <div className="font-['Poppins'] font-semibold text-4xl leading-[46px] text-[#FF624C] mt-10 mb-18">
-              <span>{timerLeft.days}</span> : <span>{timerLeft.hours}</span> :{" "}
-              <span>{timerLeft.minutes} </span> :{" "}
-              <span>{timerLeft.seconds} </span>
-              {/* <Flex
-                className={
-                  "items-center gap-x-[62px] font-['Montserrat'] font-bold text-base text-[#303030] leading-6"
-                }
-              >
-                <p>Days</p>
-                <p>Hours</p>
-                <p>Minutes</p>
-                <p>Seconds</p>
-              </Flex> */}
-            </div>
+            <div className="flex items-center gap-x-[30px] font-['Poppins'] font-semibold text-4xl leading-[46px] text-[#FF624C] mt-10 mb-2">
 
+               <div> {timerLeft.days < 10 ? "0" + timerLeft.days : timerLeft.days} </div>
+                <span> : </span>
+                <div> {timerLeft.hours < 10 ? "0" + timerLeft.hours : timerLeft.hours} </div>
+                <span> : </span>
+                <div> {timerLeft.minutes < 10 ? "0" + timerLeft.minutes : timerLeft.minutes} </div>
+                <span> : </span>
+                <div> {timerLeft.seconds} </div>
+              {/* <span>0 {timerLeft.days}</span> : <span>0 {timerLeft.hours}</span>{" "}
+              : <span> {timerLeft.minutes} </span> :{" "}
+              <span> {timerLeft.seconds} </span> */}
+              
+            </div>
+            <div className=" flex items-center gap-x-[60px] font-montserrat text-base text-[#303030] leading-6 font-normal mb-18">
+                <div>Days</div>
+                <div>Hours</div>
+                <div>Minutes</div>
+                <div>Seconds</div>
+              </div>
             <Button text={"Shop Now"} />
           </div>
 
