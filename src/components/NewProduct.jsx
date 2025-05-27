@@ -5,8 +5,29 @@ import ProductLayout from "./commonLayouts/ProductLayout";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaAngleDown } from "react-icons/fa";
+import { useEffect, useRef, useState } from "react";
 
 const NewProduct = () => {
+  let [isDropDown, setIsDropDown] = useState(true);
+  let dropDownRef = useRef(null);
+
+  let handleClick = () => {
+    setIsDropDown(!isDropDown);
+  };
+
+  useEffect(() => {
+    let handleClickOutSide = (event) => {
+      // console.log(dropDownRef.current.contains(event.target));
+      if (dropDownRef.current && !dropDownRef.current.contains(event.target)) {
+        setIsDropDown(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutSide);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutSide);
+    };
+  }, []);
+
   return (
     <div className="mb-20">
       <Container>
@@ -14,18 +35,44 @@ const NewProduct = () => {
           <h2 className="font-['Poppins'] font-semibold text-4xl leading-[46px] text-[#303030]">
             New Products
           </h2>
-          <Flex className="justify-between items-center gap-x-4 ">
+          <div
+            className=" flex justify-between items-center gap-x-4 relative"
+            ref={dropDownRef}
+          >
             <p className="font-['Montserrat'] font-normal text-base text-[#303030] leading-6">
               Sort by
             </p>
-            <Flex className="justify-between items-center gap-x-25 ">
+            <button
+              onClick={handleClick}
+              className=" flex justify-between items-center gap-x-25 "
+            >
               <p className="font-['Montserrat'] font-bold text-base text-[#FF624C] leading-6">
                 All Categories
               </p>
-
               <FaAngleDown className="text-[#303030] opacity-45" />
-            </Flex>
-          </Flex>
+              {isDropDown && (
+                <div className="w-[250px] absolute mt-2 top-[20px] left-[58px] bg-white rounded z-10 shadow-lg ">
+                  <ul className="font-['Montserrat'] font-normal text-base text-[#000000] leading-6 text-left">
+                    <li className="border-b border-[#CBCBCB] px-5 py-3  hover:bg-gray-300 hover:text-[#FF624C] duration-300 cursor-pointer">
+                      Electronics
+                    </li>
+                    <li className="border-b border-[#CBCBCB] px-5 py-3  hover:bg-gray-300 hover:text-[#FF624C] duration-300 cursor-pointer">
+                      Home Appliances
+                    </li>
+                    <li className="border-b border-[#CBCBCB] px-5 py-3  hover:bg-gray-300 hover:text-[#FF624C] duration-300 cursor-pointer">
+                      Fashion & Clothing
+                    </li>
+                    <li className="border-b border-[#CBCBCB] px-5 py-3  hover:bg-gray-300 hover:text-[#FF624C] duration-300 cursor-pointer">
+                      Sports & Outdoors
+                    </li>
+                    <li className=" px-5 py-3  hover:bg-gray-300 hover:text-[#FF624C] duration-300 cursor-pointer">
+                      Health & Beauty
+                    </li>
+                  </ul>
+                </div>
+              )}
+            </button>
+          </div>
         </Flex>
 
         <Flex className={"justify-between items-center gap-x-6"}>
