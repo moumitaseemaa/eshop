@@ -8,7 +8,7 @@ import { FaAngleDown } from "react-icons/fa";
 import { useEffect, useRef, useState } from "react";
 
 const NewProduct = () => {
-  let [isDropDown, setIsDropDown] = useState(true);
+  let [isDropDown, setIsDropDown] = useState(false);
   let dropDownRef = useRef(null);
 
   let handleClick = () => {
