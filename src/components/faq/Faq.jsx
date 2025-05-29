@@ -55,7 +55,9 @@ const Faq = () => {
               Questions that get asked the most by our clients. Get any burning
               questions?
             </p>
-            <Button text={"Ask A Question"} />
+              <div>
+                   <Button text={"Ask A Question"} />
+              </div>
           </div>
         </div>
       </Container>
