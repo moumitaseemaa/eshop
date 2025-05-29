@@ -25,6 +25,9 @@ const BestSeller = () => {
               <div className="max-w-[285px]">
                 <ProductLayout
                   percentTag={false}
+                  discountPercentTag={false}
+                  discount={false}
+                  limitedStock={false}
                   category="Tablet"
                   title="Ultra Tablet Qwerty HD 10765 Series Low Pri..."
                   rating="4"
@@ -34,12 +37,16 @@ const BestSeller = () => {
                   bg="transparent"
                   stock={false}
                   stockAmount="50"
+                   springBorder={true}
                 />
               </div>
 
               <div className="max-w-[285px]">
                 <ProductLayout
-                  percentTag={false}
+                  percentTag={true}
+                  discountPercentTag={false}
+                  discount="30"
+                  limitedStock={false}
                   category="Audio"
                   title="QuietComfort 45 Wireless Headphone ..."
                   rating="3"
@@ -49,11 +56,15 @@ const BestSeller = () => {
                   bg="transparent"
                   stock={false}
                   stockAmount="50"
+                   springBorder={true}
                 />
               </div>
               <div className="max-w-[285px]">
                 <ProductLayout
-                  percentTag={true}
+                  percentTag={false}
+                  discountPercentTag={false}
+                  discount={false}
+                  limitedStock={false}
                   category="Laptop"
                   title="Surface Laptop 4 XPS 13 Plus 64GB i7 Touch ..."
                   rating="5"
@@ -63,11 +74,15 @@ const BestSeller = () => {
                   bg="transparent"
                   stock={false}
                   stockAmount="50"
+                   springBorder={true}
                 />
               </div>
               <div className="max-w-[285px]">
                 <ProductLayout
                   percentTag={false}
+                  discountPercentTag={false}
+                  discount={false}
+                  limitedStock={false}
                   category="Camera"
                   title="CamPro HERO10 Black Sleek Design 2023 4K ..."
                   rating="1"
@@ -77,11 +92,15 @@ const BestSeller = () => {
                   bg="transparent"
                   stock={false}
                   stockAmount="50"
+                   springBorder={true}
                 />
               </div>
               <div className="max-w-[285px]">
                 <ProductLayout
                   percentTag={false}
+                  discountPercentTag={false}
+                  discount={false}
+                  limitedStock={false}
                   category="Camera"
                   title="CamPro HERO10 Black Sleek Design 2023 4K ..."
                   rating="1"
@@ -91,11 +110,15 @@ const BestSeller = () => {
                   bg="transparent"
                   stock={false}
                   stockAmount="50"
+                   springBorder={true}
                 />
               </div>
               <div className="max-w-[285px]">
                 <ProductLayout
-                  percentTag={false}
+                  percentTag={true}
+                  discountPercentTag={false}
+                  discount="10"
+                  limitedStock={false}
                   category="Camera"
                   title="CamPro HERO10 Black Sleek Design 2023 4K ..."
                   rating="1"
@@ -105,6 +128,7 @@ const BestSeller = () => {
                   bg="transparent"
                   stock={false}
                   stockAmount="50"
+                   springBorder={true}
                 />
               </div>
             </Flex>

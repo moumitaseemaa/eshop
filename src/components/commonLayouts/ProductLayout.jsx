@@ -7,24 +7,32 @@ import { FaStar } from "react-icons/fa";
 
 const ProductLayout = ({
   percentTag = "50%",
+  discountPercentTag = "10%",
+  discount = "10",
   category = "Laptop",
   title = "Orange Watch 12 High Quality Health Sensor...",
   rating = "5",
   ratingAmount = "120",
   price = "$1,499.99",
-  border,
+  border = "transparent",
   bg = "transparent",
   stock,
   stockAmount = "50 AVAILABLE",
+  limitedStock = "LIMITED STOCK!",
+  springBorder,
+  springPadding,
+  springCardBg,
 }) => {
   const [ratingVal, setRatingVal] = useState(new Array(+rating).fill(rating));
 
   return (
     <div
-      style={{ background: bg }}
-      className={
-        "border border-transparent p-6 hover:border-[#CBCBCB] duration-300 rounded-[10px] group"
-      }
+   
+      className={` flex flex-col bg-white p-6  rounded-[10px] duration-300 group border border-transparent 
+        ${springPadding && `p-10`}
+        ${springBorder && `hover:border hover:border-[#CBCBCB]`}
+        ${springCardBg ? "hover:bg-[#EAEAEA]" : ""}
+        `}
     >
       <div className="relative">
         <img
@@ -34,7 +42,13 @@ const ProductLayout = ({
         />
         {percentTag && (
           <div className="bg-[#FF624C] py-[7px] px-[20px] rounded-[5px] font-['Montserrat'] font-bold text-base text-white leading-6 absolute top-[-8px] right-0">
-            50%
+            {discount}%
+          </div>
+        )}
+
+        {discountPercentTag && (
+          <div className="bg-[#FF624C] size-25 rounded-full flex justify-center items-center font-['Poppins'] font-semibold text-2xl text-white leading-[30px] absolute top-[15px] right-[8px]">
+            {discount}%
           </div>
         )}
         <Flex
@@ -42,7 +56,7 @@ const ProductLayout = ({
             " flex items-center justify-center gap-x-[18px] absolute bottom-[6px] left-[47%] -translate-x-1/2 scale-0 group-hover:scale-100"
           }
         >
-          <div className="size-[50px] bg-white border border-[#FF624C] rounded-full flex items-center justify-center hover:bg-[#FF624C] hover:text-white duration-300 cursor-pointer ">
+          <div className="icon size-[50px] bg-white border border-[#FF624C] rounded-full flex items-center justify-center hover:bg-[#FF624C] hover:text-white duration-300 cursor-pointer ">
             <CartIcon
               width={28}
               height={28}
@@ -50,10 +64,10 @@ const ProductLayout = ({
               subColor="transparent"
             />
           </div>
-          <div className="size-[50px] bg-white border border-[#FF624C] rounded-full flex items-center justify-center hover:bg-[#FF624C] hover:text-white duration-300 cursor-pointer ">
+          <div className="icon size-[50px] bg-white border border-[#FF624C] rounded-full flex items-center justify-center hover:bg-[#FF624C] hover:text-white duration-300 cursor-pointer ">
             <HeartIcon />
           </div>
-          <div className="size-[50px] bg-white border border-[#FF624C] rounded-full flex items-center justify-center hover:bg-[#FF624C] hover:text-white duration-300 cursor-pointer ">
+          <div className="icon size-[50px] bg-white border border-[#FF624C] rounded-full flex items-center justify-center hover:bg-[#FF624C] hover:text-white duration-300 cursor-pointer ">
             <ShareIcon />
           </div>
         </Flex>
@@ -79,11 +93,19 @@ const ProductLayout = ({
         </p>
         {stock && (
           <div className="w-full h-[30px] bg-[#dddd] rounded-[25px] relative mt-[32px]">
-            <div className="w-1/2 h-[30px] bg-[#303030] rounded-[25px]">
+            <div className="w-[61%] h-[30px] bg-[#303030] rounded-[25px]">
               <p className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-['Montserrat'] font-bold text-sm text-[#fff] leading-6">
-                $ {stockAmount} AVAILABLE
+                {stockAmount} AVAILABLE
               </p>
             </div>
+          </div>
+        )}
+
+        {limitedStock && (
+          <div className="w-full h-[30px] bg-[#FF624C] rounded-[25px] relative mt-[32px]">
+            <p className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-['Montserrat'] font-bold text-sm text-[#fff] leading-6">
+              LIMITED STOCK!
+            </p>
           </div>
         )}
       </div>

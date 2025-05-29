@@ -76,66 +76,96 @@ const NewProduct = () => {
         </Flex>
 
         <Flex className={"justify-between items-center gap-x-6"}>
-          <ProductLayout
-            percentTag={true}
-            category="Watch"
-            title="CamPro HERO10 Black Sleek Design 2023 4K ..."
-            rating="5"
-            ratingAmount="120"
-            price="959.99"
-            border={true}
-            bg="transparent"
-            stock={false}
-            stockAmount="50"
-          />
-          <ProductLayout
-            percentTag={false}
-            category="Tablet"
-            title="Ultra Tablet Qwerty HD 10765 Series Low Pri..."
-            rating="4"
-            ratingAmount="100"
-            price="799.00"
-            border={true}
-            bg="transparent"
-            stock={false}
-            stockAmount="50"
-          />
-          <ProductLayout
-            percentTag={false}
-            category="Audio"
-            title="QuietComfort 45 Wireless Headphone ..."
-            rating="3"
-            ratingAmount="120"
-            price="329.99"
-            border={true}
-            bg="transparent"
-            stock={false}
-            stockAmount="50"
-          />
-          <ProductLayout
-            percentTag={true}
-            category="Laptop"
-            title="Surface Laptop 4 XPS 13 Plus 64GB i7 Touch ..."
-            rating="5"
-            ratingAmount="120"
-            price="2,399.99"
-            border={true}
-            bg="transparent"
-            stock={false}
-            stockAmount="50"
-          />
-          <ProductLayout
-            percentTag={false}
-            category="Camera"
-            title="CamPro HERO10 Black Sleek Design 2023 4K ..."
-            rating="1"
-            ratingAmount="20"
-            price="1,499.99"
-            border={true}
-            bg="transparent"
-            stock={false}
-            stockAmount="50"
-          />
+          <div className="max-w-[284px]">
+            <ProductLayout
+              percentTag={true}
+              discountPercentTag={false}
+              discount="50"
+              limitedStock={false}
+              category="Watch"
+              title="CamPro HERO10 Black Sleek Design 2023 4K ..."
+              rating="5"
+              ratingAmount="120"
+              price="959.99"
+              border={true}
+              bg="transparent"
+              stock={false}
+              stockAmount="50"
+              springBorder={true}
+            />
+          </div>
+          <div className="max-w-[284px]">
+            <ProductLayout
+              percentTag={false}
+              discountPercentTag={false}
+              discount={false}
+              limitedStock={false}
+              category="Tablet"
+              title="Ultra Tablet Qwerty HD 10765 Series Low Pri..."
+              rating="4"
+              ratingAmount="100"
+              price="799.00"
+              border={true}
+              bg="transparent"
+              stock={false}
+              stockAmount="50"
+              springBorder={true}
+            />
+          </div>
+          <div className="max-w-[284px]">
+            <ProductLayout
+              percentTag={false}
+              discountPercentTag={false}
+              discount={false}
+              limitedStock={false}
+              category="Audio"
+              title="QuietComfort 45 Wireless Headphone ..."
+              rating="3"
+              ratingAmount="120"
+              price="329.99"
+              border={true}
+              bg="transparent"
+              stock={false}
+              stockAmount="50"
+              springBorder={true}
+            />
+          </div>
+          <div className="max-w-[284px]">
+            <ProductLayout
+              percentTag={true}
+              discountPercentTag={false}
+              discount="20"
+              limitedStock={false}
+              category="Laptop"
+              title="Surface Laptop 4 XPS 13 Plus 64GB i7 Touch ..."
+              rating="5"
+              ratingAmount="120"
+              price="2,399.99"
+              border={true}
+              bg="transparent"
+              stock={false}
+              stockAmount="50"
+              springBorder={true}
+            />
+          </div>
+          <div className="max-w-[284px]">
+            <ProductLayout
+              percentTag={false}
+              discountPercentTag={false}
+              discount={false}
+              limitedStock={false}
+              category="Camera"
+              title="CamPro HERO10 Black Sleek Design 2023 4K ..."
+              rating="1"
+              ratingAmount="20"
+              price="1,499.99"
+              border={true}
+              bg="transparent"
+              stock={false}
+              stockAmount="50"
+              springBorder={true}
+            />
+          </div>
         </Flex>
         <div className="text-center mt-16">
           <Button

@@ -1,9 +1,20 @@
 @import "tailwindcss";
 
 .slick-prev:before {
-    display: none;
+  display: none;
 }
 
 .slick-next:before {
-    display: none;
+  display: none;
+}
+
+.icon:hover path {
+  fill: white;
+}
+
+.spring_sale.slick-slider .slick-track {
+  @apply flex gap-6;
+}
+.feature_product.slick-slider .slick-track {
+  @apply flex gap-1;
 }

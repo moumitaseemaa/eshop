@@ -87,78 +87,102 @@ const FeaturedProduct = () => {
             <LongLeftArrow />
           </Flex>
         </Flex>
-        <Slider {...settings}>
+        <Slider {...settings} className="feature_product">
+          <ProductLayout
+            percentTag={false}
+            discountPercentTag={false}
+            discount={false}
+            category="Phone"
+            title="JPhone 13 High Quality Value Buy Best Cam..."
+            rating="5"
+            ratingAmount="50"
+            price="999.00"
+            border={true}
+            bg="transparent"
+            stock={false}
+            stockAmount="50"
+            limitedStock={false}
+            springBorder={true}
+          />
           <ProductLayout
             percentTag={true}
-            category="Watch"
-            title="CamPro HERO10 Black Sleek Design 2023 4K ..."
+            discountPercentTag={false}
+            discount="50"
+            category="Audio"
+            title="WH-1000XM4 Wireless Headphones High Qu..."
             rating="5"
             ratingAmount="120"
-            price="959.99"
+            price="59.00"
             border={true}
             bg="transparent"
             stock={false}
             stockAmount="50"
+            limitedStock={false}
+            springBorder={true}
           />
           <ProductLayout
             percentTag={false}
-            category="Tablet"
-            title="Ultra Tablet Qwerty HD 10765 Series Low Pri..."
-            rating="4"
-            ratingAmount="100"
-            price="799.00"
-            border={true}
-            bg="transparent"
-            stock={false}
-            stockAmount="50"
-          />
-          <ProductLayout
-            percentTag={false}
-            category="Audio"
-            title="QuietComfort 45 Wireless Headphone ..."
-            rating="3"
-            ratingAmount="120"
-            price="329.99"
-            border={true}
-            bg="transparent"
-            stock={false}
-            stockAmount="50"
-          />
-          <ProductLayout
-            percentTag={true}
+            discountPercentTag={false}
+            discount={false}
             category="Laptop"
-            title="Surface Laptop 4 XPS 13 Plus 64GB i7 Touch ..."
+            title="S21 Laptop Ultra HD LED Screen Feature 2023 ..."
             rating="5"
-            ratingAmount="120"
-            price="2,399.99"
+            ratingAmount="100"
+            price="1,199.00"
             border={true}
             bg="transparent"
             stock={false}
             stockAmount="50"
+            limitedStock={false}
+            springBorder={true}
           />
           <ProductLayout
             percentTag={false}
+            discountPercentTag={false}
+            discount={false}
             category="Camera"
-            title="CamPro HERO10 Black Sleek Design 2023 4K ..."
-            rating="1"
-            ratingAmount="20"
-            price="1,499.99"
+            title="Mini Polaroid Camera for Girls with Flash Li..."
+            rating="5"
+            ratingAmount="70"
+            price="79.00"
             border={true}
             bg="transparent"
             stock={false}
             stockAmount="50"
+            limitedStock={false}
+            springBorder={true}
           />
           <ProductLayout
             percentTag={false}
-            category="Audio"
-            title="QuietComfort 45 Wireless Headphone ..."
-            rating="3"
-            ratingAmount="120"
-            price="329.99"
+            discountPercentTag={false}
+            discount={false}
+            category="television"
+            title="AG OLED65CXPUA 4K Smart OLED TV New ..."
+            rating="5"
+            ratingAmount="20"
+            price="2,799.00"
             border={true}
             bg="transparent"
             stock={false}
             stockAmount="50"
+            limitedStock={false}
+            springBorder={true}
+          />
+          <ProductLayout
+            percentTag={true}
+            discountPercentTag={false}
+            discount={false}
+            category="Phone"
+            title="JPhone 13 High Quality Value Buy Best Cam..."
+            rating="5"
+            ratingAmount="50"
+            price="999.00"
+            border={true}
+            bg="transparent"
+            stock={false}
+            stockAmount="50"
+            limitedStock={false}
+            springBorder={true}
           />
         </Slider>
       </Container>
