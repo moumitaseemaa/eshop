@@ -58,7 +58,7 @@ const BottomBar = () => {
               <li className="relative" ref={CategoriesDropDownRef}>
                 <button
                   onClick={handleCategoriesDropDownClick}
-                  className="flex gap-x-4"
+                  className="flex gap-x-4 cursor-pointer"
                 >
                   <FaBars className={"size-[20px] text-[#FFFFFF]"} />
                   All Categories
@@ -88,7 +88,7 @@ const BottomBar = () => {
               <li className="relative" ref={dropDownRef}>
                 <button
                   onClick={handleDropDownClick}
-                  className="flex items-center gap-x-2"
+                  className="flex items-center gap-x-2 cursor-pointer"
                 >
                   Products
                   <FaAngleDown className="size-4 " />
