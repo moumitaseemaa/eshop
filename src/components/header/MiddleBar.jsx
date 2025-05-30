@@ -2,9 +2,9 @@ import { Link } from "react-router-dom"
 import Flex from "../commonLayouts/Flex";
 import Container from "../commonLayouts/Container";
 import Logo from "../../assets/logo.png";
-import { IoMdSearch } from "react-icons/io";
 import CartIcon from "../../icons/CartIcon";
 import UserIcon from "../../icons/UserIcon";
+import { IoIosSearch } from "react-icons/io";
 
 const MiddleBar = () => {
   return (
@@ -20,18 +20,20 @@ const MiddleBar = () => {
             className="w-[332px] py-[18px] px-6  border border-[#CCCCCC] rounded-[10px]  "
             placeholder="Search Products ..."
             />
-            <IoMdSearch className="text-3xl absolute top-1/2  right-[24px] -translate-y-1/2 " />
+              
+            <IoIosSearch className=" text-2xl text-[##303030] absolute top-1/2 right-[24px] -translate-y-1/2 cursor-pointer" />
+
 
           </div>
           <div className="relative pl-[50px] mr-[90px]">
-            <div className="absolute top-[5px]  left-0">
+            <div className="absolute top-[5px]  left-0 cursor-pointer">
               <CartIcon/>
             </div>
             <p className="font-['Montserrat'] font-normal text-base text-[#303030] leading-6">Cart</p>
             <span className="font-['Montserrat'] font-bold text-base text-[#303030] leading-6">$ 150,00</span>
           </div>
-           <div className="pl-[50px] relative after:absolute after:content-[''] after:bg-[#BFBFBF] after:w-[1px] after:h-[32px] after:left-[-45px] after:top-[50%] after:-translate-y-1/2">
-            <div className="absolute top-[5px] left-0">
+           <div className="pl-[50px] relative after:absolute after:content-[''] after:bg-[#BFBFBF] after:w-[1px] after:h-[32px] after:left-[-45px] after:top-[25%] after:-translate-y-1/2">
+            <div className="absolute top-[5px] left-0 cursor-pointer">
               <UserIcon/>
             </div>
             <p className="font-['Montserrat'] font-normal text-base text-[#303030] leading-6">User</p>
