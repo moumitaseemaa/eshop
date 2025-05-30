@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { SlLocationPin } from "react-icons/sl";
-import { LiaPhoneSolid } from "react-icons/lia";
+import HeaderPhoneIcon from "../../../icons/header/HeaderPhoneIcon";
+import HeaderLocationIcon from "../../../icons/header/HeaderLocationIcon";
 
 const TopLeftBar = () => {
   return (
@@ -10,11 +10,11 @@ const TopLeftBar = () => {
         target="-blank"
         className="flex items-center gap-2 "
       >
-        <SlLocationPin className="text-base text-[#303030]" />
+        <HeaderLocationIcon className="text-base text-[#303030]" />
         123 Main Street, Anytown USA
       </Link>
       <Link to={"tel:01912384567"} className="flex items-center gap-2">
-        <LiaPhoneSolid className="text-xl text-[#303030]" />
+        <HeaderPhoneIcon className="text-xl text-[#303030]" />
         +1 (555) 123-4567
       </Link>
     </div>

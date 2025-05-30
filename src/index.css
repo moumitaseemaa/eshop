@@ -11,9 +11,6 @@
 .icon:hover path {
   fill: white;
 }
-.iconHover:hover path {
-  fill: "#FF624C";
-}
 
 .spring_sale.slick-slider .slick-track {
   @apply flex gap-6;
