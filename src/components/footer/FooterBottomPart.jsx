@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 import Container from "../commonLayouts/Container";
 import Flex from "../commonLayouts/Flex";
 import Logo from "../../assets/logo.png";
-import { LuMapPin } from "react-icons/lu";
-import { MdOutlinePhone } from "react-icons/md";
-import { MdEmail } from "react-icons/md";
 import FooterLogo from "../../assets/footerLogo.png";
+import Location from "../../icons/footer/Location";
+import EnvelopeIcon from "../../icons/footer/EnvelopeIcon";
+import PhoneIcon from "../../icons/footer/PhoneIcon";
 
 const FooterBottomPart = () => {
   return (
@@ -22,9 +22,9 @@ const FooterBottomPart = () => {
                   to={"tel:01912384567"}
                   className="absolute left-2 top-1/2 -translate-1/2 "
                 >
-                  <MdOutlinePhone className="size-[20px] hover:text-[#FF624C] duration-300" />
+                  <PhoneIcon />
                 </Link>
-                <span className="hover:text-[#FF624C] duration-300">
+                <span className="hover:text-[#FF624C] duration-300 cursor-pointer">
                   +1 (555) 123-4567
                 </span>
               </li>
@@ -33,20 +33,20 @@ const FooterBottomPart = () => {
                   to={"mailto:information@eshop.com"}
                   className="absolute left-2 top-1/2 -translate-1/2 "
                 >
-                  <MdEmail className=" size-[20px] hover:text-[#FF624C] duration-300 " />
+                  <EnvelopeIcon />
                 </Link>
-                <span className="hover:text-[#FF624C] duration-300">
+                <span className="hover:text-[#FF624C] duration-300 cursor-pointer">
                   information@eshop.com
                 </span>
               </li>
               <li className="relative pl-8">
                 <Link
                   to={"https://maps.app.goo.gl/8z2YEqrA2CYrKGrs5"}
-                  className="absolute left-2 top-1/2 -translate-1/2 "
+                  className="absolute left-2 top-1/2 -translate-1/2"
                 >
-                  <LuMapPin className=" size-[20px] hover:text-[#FF624C] duration-300 " />
+                  <Location />
                 </Link>
-                <span className="hover:text-[#FF624C] duration-300">
+                <span className="hover:text-[#FF624C] duration-300 cursor-pointer">
                   123 Main Street, Anytown USA
                 </span>
               </li>
@@ -200,7 +200,9 @@ const FooterBottomPart = () => {
             "justify-between items-center font-['Montserrat'] font-normal text-sm leading-5 text-[#303030] pt-2"
           }
         >
-          <p>Copyright © 2023 E-Shop. All Rights Reserved.</p>
+          <p className="hover:text-[#FF624C] duration-300 cursor-pointer">
+            Copyright © 2023 E-Shop. All Rights Reserved.
+          </p>
           <p className="flex  items-center space-x-2">
             <Link to={"#"} className="hover:text-[#FF624C] duration-300">
               Privacy Policy
