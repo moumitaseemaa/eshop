@@ -14,7 +14,7 @@ const BestSeller = () => {
                 Best Seller
               </h2>
               <Flex className="justify-between items-center gap-x-4">
-                <p className="font-['Montserrat'] font-bold text-base text-[#FF624C] leading-6">
+                <p className="font-['Montserrat'] font-bold text-base text-[#FF624C] leading-6 cursor-pointer">
                   View All
                 </p>
                 <LongLeftArrow />
