@@ -44,12 +44,12 @@ const NewProduct = () => {
             </p>
             <button
               onClick={handleClick}
-              className=" flex justify-between items-center gap-x-25 "
+              className=" flex justify-between items-center gap-x-25 cursor-pointer "
             >
               <p className="font-['Montserrat'] font-bold text-base text-[#FF624C] leading-6">
                 All Categories
               </p>
-              <FaAngleDown className="text-[#303030] opacity-45" />
+              <FaAngleDown className={`text-[#303030] opacity-45 ${isDropDown ? "rotate-[180deg]" : ""}`}/>
               {isDropDown && (
                 <div className="w-[250px] absolute mt-2 top-[20px] left-[58px] bg-white rounded z-10 shadow-lg ">
                   <ul className="font-['Montserrat'] font-normal text-base text-[#000000] leading-6 text-left">

@@ -10,6 +10,11 @@
 
 .icon:hover path {
   fill: white;
+  transition: .4s;
+  -webkit-transition: .4s;
+  -moz-transition: .4s;
+  -ms-transition: .4s;
+  -o-transition: .4s;
 }
 
 .spring_sale.slick-slider .slick-track {
