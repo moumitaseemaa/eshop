@@ -54,7 +54,7 @@ const TopRightBar = () => {
   return (
     <Flex className={"justify-end items-center gap-x-[50px]"}>
       <div>
-        <select name="currency">
+        <select name="currency" className="cursor-pointer">
           <option value="USD">USD</option>
           <option value="BDT">EUR</option>
           <option value="BDT">BDT</option>

@@ -21,7 +21,7 @@ const MiddleBar = () => {
             placeholder="Search Products ..."
             />
               
-            <IoIosSearch className=" text-2xl text-[##303030] absolute top-1/2 right-[24px] -translate-y-1/2 cursor-pointer" />
+            <IoIosSearch className=" text-2xl text-[#303030] absolute top-1/2 right-[24px] -translate-y-1/2 cursor-pointer" />
 
 
           </div>
