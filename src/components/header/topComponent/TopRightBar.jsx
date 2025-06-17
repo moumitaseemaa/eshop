@@ -41,7 +41,7 @@ const TopRightBar = () => {
   // useEffect of CountryNameDropDown
   useEffect(() => {
     let handleClickCountryOutSide = (event) => {
-      console.log(countryRef.current.contains(event.target));
+      // console.log(countryRef.current.contains(event.target));
       if (countryRef.current && !countryRef.current.contains(event.target))
         setIsPost(false);
     };

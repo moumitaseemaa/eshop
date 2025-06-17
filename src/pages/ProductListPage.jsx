@@ -1,9 +1,9 @@
-import React from 'react'
+import ProductListComponent from "../components/productListComponent/ProductListComponent";
 
 const ProductListPage = () => {
   return (
-    <div>ProductListPage</div>
-  )
-}
+      <ProductListComponent/>
+       );
+};
 
-export default ProductListPage
+export default ProductListPage;
