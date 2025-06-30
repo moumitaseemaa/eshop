@@ -12,7 +12,7 @@ const ProductListRightSide = () => {
     name: `product ${index + 1}`,
     price: (Math.random() * 100).toFixed(2),
   }));
-  console.log(products);
+  // console.log(products);
 
   const startIndex = (currentPage - 1) * itemsPerPage;
   const currentProducts = products.slice(startIndex, startIndex + itemsPerPage);

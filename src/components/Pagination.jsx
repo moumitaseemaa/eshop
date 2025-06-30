@@ -13,6 +13,7 @@ const Pagination = ({
 
   let startPage = Math.max(1, currentPage - pagesToShowBeforeAfter);
   let endPage = Math.min(totalPages, currentPage + pagesToShowBeforeAfter);
+  
   if (endPage - startPage + 1 < maxPagesToShow) {
     if (startPage > 1) {
       startPage = Math.max(1, endPage - maxPagesToShow + 1);
@@ -56,9 +57,9 @@ const Pagination = ({
       >
         <PaginationRightArrow />
       </button>
-      <span className="ml-2">
+      {/* <span className="ml-2">
         Showing {currentPage * itemsPerPage} of {totalItems} results.
-      </span>
+      </span> */}
     </div>
   );
 };
