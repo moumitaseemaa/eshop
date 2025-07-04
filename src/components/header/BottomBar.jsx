@@ -96,7 +96,7 @@ const BottomBar = () => {
                     <div className="w-48 absolute mt-2 top-[20px] left-0 bg-white rounded z-10 shadow-lg ">
                       <ul className="font-['Montserrat'] font-normal text-base text-[#000000] leading-6 text-left">
                         <li className="border-b border-[#CBCBCB] px-5 py-3  hover:bg-gray-300 hover:text-[#FF624C] duration-300 cursor-pointer">
-                          LumiGlow Lamp
+                        <Link to={'/product-list'}> All Products</Link>
                         </li>
                         <li className="border-b border-[#CBCBCB] px-5 py-3  hover:bg-gray-300 hover:text-[#FF624C] duration-300 cursor-pointer">
                           EcoBreeze Purifier
