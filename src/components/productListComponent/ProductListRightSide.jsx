@@ -53,12 +53,14 @@ const ProductListRightSide = () => {
           </div>
         ))}
         {/* Pagination part */}
-        <Pagination
+      <div className="mx-auto mt-20">
+          <Pagination
           totalItems={products.length}
           itemsPerPage={itemsPerPage}
           currentPage={currentPage}
           onPageChange={setCurrentPage}
         />
+      </div>
       </Flex>
     </div>
   );
