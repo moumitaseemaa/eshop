@@ -1,5 +1,6 @@
 const Button = ({
   text,
+  width,
   bg = "#FF624C",
   color = "#fff",
   py = "16px",
@@ -9,6 +10,7 @@ const Button = ({
   fontSize = "20px",
   rounded = "10px",
   border = "transparent",
+  
 }) => {
   return (
     <button
@@ -22,6 +24,7 @@ const Button = ({
         fontWeight: weight,
         borderRadius: rounded,
         cursor: "pointer",
+        width:width,
       }}
     >
       {text}
