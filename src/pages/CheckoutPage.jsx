@@ -8,14 +8,13 @@ const CheckoutPage = () => {
   return (
     <Container>
       {/* Path Link */}
-      <div>
-        <div className="flex font-['Montserrat'] font-normal text-base text-[#303030] leading-6 gap-x-7.5 mt-16 mb-12">
-          <Link>Home</Link>
-          <Link className="relative after:absolute after:content-[''] after:bg-[#303030] after:w-[1px] after:h-[15px] after:left-[-16px] after:top-[50%] after:-translate-y-1/2 before:absolute before:content-[''] before:bg-[#303030] before:w-[1px] before:h-[15px] before:right-[-16px] before:top-[50%] before:-translate-y-1/2">
-            Cart
-          </Link>
-          <Link className="font-bold">Checkout</Link>
-        </div>
+
+      <div className="flex font-['Montserrat'] font-normal text-base text-[#303030] leading-6 gap-x-7.5 mt-16 mb-12">
+        <Link>Home</Link>
+        <Link className="relative after:absolute after:content-[''] after:bg-[#303030] after:w-[1px] after:h-[15px] after:left-[-16px] after:top-[50%] after:-translate-y-1/2 before:absolute before:content-[''] before:bg-[#303030] before:w-[1px] before:h-[15px] before:right-[-16px] before:top-[50%] before:-translate-y-1/2">
+          Cart
+        </Link>
+        <Link className="font-bold">Checkout</Link>
       </div>
       <div className="mb-20 text-center">
         <h2 className="font-['Poppins'] font-bold text-[56px] leading-17 text-[#303030] mb-11">
