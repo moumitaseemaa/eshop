@@ -38,8 +38,8 @@ const ContactPage = () => {
             <div className="flex flex-wrap justify-between mb-8">
               <div className="w-full">
                 <InputBox
-                  labelName={"First Name"}
-                  placeholder={"Amelia Robert"}
+                  labelName={"Name"}
+                  placeholder={"Amelia Robert Watson"}
                   required={true}
                 />
               </div>
