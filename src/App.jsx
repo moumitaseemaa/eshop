@@ -6,6 +6,7 @@ import BlogPage from "./pages/BlogPage";
 import CheckoutPage from "./pages/CheckoutPage";
 import ContactPage from "./pages/ContactPage";
 import CommonLayout from "./components/commonLayouts/CommonLayout";
+import CartPage from "./pages/CartPage";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/checkout" element={<CheckoutPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/cart" element={<CartPage />} />
       </Route>
     </Routes>
   );

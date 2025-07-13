@@ -78,7 +78,7 @@ const FacilityWithAddToCart = () => {
             <input
               type="text"
               value={quantity}
-              className="w-[184px] font-poppins font-semibold text-4xl leading-11 text-[#303030] text-center"
+              className="w-[184px] font-['Poppins'] font-semibold text-4xl leading-11 text-[#303030] text-center"
             />
             <button
               onClick={() => handleQuantity("plus")}
