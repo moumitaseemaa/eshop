@@ -52,7 +52,7 @@ const TopRightBar = () => {
   }, []);
 
   return (
-    <Flex className={"justify-end items-center gap-x-[50px]"}>
+    <div className={"flex justify-end items-center gap-x-[50px] px-3 pl-6.5 sm:px-0 sm:pl-0"}>
       <div>
         <select name="currency" className="cursor-pointer">
           <option value="USD">USD</option>
@@ -66,7 +66,7 @@ const TopRightBar = () => {
         </select>
       </div>
       <div
-        className="relative after:absolute after:content-[''] after:bg-[#BFBFBF] after:w-[1px] after:h-[32px] after:left-[-25px] after:top-[50%] after:-translate-y-1/2 before:absolute before:content-[''] before:bg-[#BFBFBF] before:w-[1px] before:h-[32px] before:right-[-25px] before:top-[50%] before:-translate-y-1/2"
+        className="w-[40%] sm:w-full relative after:absolute after:content-[''] after:bg-[#CBCBCB] after:w-[1px] after:h-[16px] sm:after:h-[32px] after:left-[-25px] after:top-[50%] after:-translate-y-1/2 before:absolute before:content-[''] before:bg-[#CBCBCB] before:w-[1px] before:h-[16px] sm:before:h-[32px] before:right-[-25px] before:top-[50%] before:-translate-y-1/2"
         ref={countryRef}
       >
         <select
@@ -140,7 +140,7 @@ const TopRightBar = () => {
           <FaInstagram />
         </Link>
       </Flex>
-    </Flex>
+    </div>
   );
 };
 

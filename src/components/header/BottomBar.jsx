@@ -4,7 +4,15 @@ import Flex from "../commonLayouts/Flex";
 import { FaBars } from "react-icons/fa6";
 import { FaAngleDown } from "react-icons/fa";
 import { useEffect, useRef, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { IoMdClose } from "react-icons/io";
+import { hideSideBar } from "../../slices/sideBarSlice";
+
 const BottomBar = () => {
+  // responsive part
+  let dispatch = useDispatch();
+
+  // dropdown part
   const [isDroDownOpen, setIsDroDownOpen] = useState(false);
   const [isCategoriesDroDownOpen, setIsCategoriesDroDownOpen] = useState(false);
 
@@ -49,96 +57,153 @@ const BottomBar = () => {
     };
   }, []);
 
+  //  =============== responsive part =============== //
+  let sideBar = useSelector((state) => state.handleSideBar.value);
+
+  let handleHideSideBar = () => {
+    dispatch(hideSideBar());
+  };
+  //  =============== responsive part =============== //
+
   return (
-    <div className="bg-[#FF624C]">
-      <Container>
-        <Flex className={"justify-between items-center py-6"}>
-          <div>
-            <ul className="flex items-center gap-x-20 font-['Montserrat'] font-bold text-base text-[#FFFFFF] leading-6">
-              <li className="relative" ref={CategoriesDropDownRef}>
-                <button
-                  onClick={handleCategoriesDropDownClick}
-                  className="flex gap-x-4 cursor-pointer"
-                >
-                  <FaBars className={"size-[20px] text-[#FFFFFF]"} />
-                  All Categories
-                  {isCategoriesDroDownOpen && (
-                    <div className="w-48 absolute mt-2 top-[20px] left-0 bg-white rounded z-10 shadow-lg ">
-                      <ul className="font-['Montserrat'] font-normal text-base text-[#000000] leading-6 text-left">
-                        <li className="border-b border-[#CBCBCB] px-5 py-3  hover:bg-gray-300 hover:text-[#FF624C] duration-300 cursor-pointer">
-                          Electronics
-                        </li>
-                        <li className="border-b border-[#CBCBCB] px-5 py-3  hover:bg-gray-300 hover:text-[#FF624C] duration-300 cursor-pointer">
-                          Home Appliances
-                        </li>
-                        <li className="border-b border-[#CBCBCB] px-5 py-3  hover:bg-gray-300 hover:text-[#FF624C] duration-300 cursor-pointer">
-                          Fashion & Clothing
-                        </li>
-                        <li className="border-b border-[#CBCBCB] px-5 py-3  hover:bg-gray-300 hover:text-[#FF624C] duration-300 cursor-pointer">
-                          Sports & Outdoors
-                        </li>
-                        <li className=" px-5 py-3  hover:bg-gray-300 hover:text-[#FF624C] duration-300 cursor-pointer">
-                          Health & Beauty
-                        </li>
-                      </ul>
-                    </div>
-                  )}
-                </button>
+    <>
+      <div className="bg-[#FF624C] hidden sm:block">
+        <Container>
+          <Flex className={"justify-between items-center py-6"}>
+            <div>
+              <ul className="flex items-center gap-x-20 font-['Montserrat'] font-bold text-base text-[#FFFFFF] leading-6">
+                <li className="relative" ref={CategoriesDropDownRef}>
+                  <button
+                    onClick={handleCategoriesDropDownClick}
+                    className="flex gap-x-4 cursor-pointer"
+                  >
+                    <FaBars className={"size-[20px] text-[#FFFFFF]"} />
+                    All Categories
+                    {isCategoriesDroDownOpen && (
+                      <div className="w-48 absolute mt-2 top-[20px] left-0 bg-white rounded z-10 shadow-lg ">
+                        <ul className="font-['Montserrat'] font-normal text-base text-[#000000] leading-6 text-left">
+                          <li className="border-b border-[#CBCBCB] px-5 py-3  hover:bg-gray-300 hover:text-[#FF624C] duration-300 cursor-pointer">
+                            Electronics
+                          </li>
+                          <li className="border-b border-[#CBCBCB] px-5 py-3  hover:bg-gray-300 hover:text-[#FF624C] duration-300 cursor-pointer">
+                            Home Appliances
+                          </li>
+                          <li className="border-b border-[#CBCBCB] px-5 py-3  hover:bg-gray-300 hover:text-[#FF624C] duration-300 cursor-pointer">
+                            Fashion & Clothing
+                          </li>
+                          <li className="border-b border-[#CBCBCB] px-5 py-3  hover:bg-gray-300 hover:text-[#FF624C] duration-300 cursor-pointer">
+                            Sports & Outdoors
+                          </li>
+                          <li className=" px-5 py-3  hover:bg-gray-300 hover:text-[#FF624C] duration-300 cursor-pointer">
+                            Health & Beauty
+                          </li>
+                        </ul>
+                      </div>
+                    )}
+                  </button>
+                </li>
+                <li className="relative" ref={dropDownRef}>
+                  <button
+                    onClick={handleDropDownClick}
+                    className="flex items-center gap-x-2 cursor-pointer"
+                  >
+                    Products
+                    <FaAngleDown className="size-4 " />
+                    {isDroDownOpen && (
+                      <div className="w-48 absolute mt-2 top-[20px] left-0 bg-white rounded z-10 shadow-lg ">
+                        <ul className="font-['Montserrat'] font-normal text-base text-[#000000] leading-6 text-left">
+                          <li className="border-b border-[#CBCBCB] px-5 py-3  hover:bg-gray-300 hover:text-[#FF624C] duration-300 cursor-pointer">
+                            <Link to={"/product-list"}> All Products</Link>
+                          </li>
+                          <li className="border-b border-[#CBCBCB] px-5 py-3  hover:bg-gray-300 hover:text-[#FF624C] duration-300 cursor-pointer">
+                            EcoBreeze Purifier
+                          </li>
+                          <li className="border-b border-[#CBCBCB] px-5 py-3  hover:bg-gray-300 hover:text-[#FF624C] duration-300 cursor-pointer">
+                            SwiftCharge
+                          </li>
+                          <li className="border-b border-[#CBCBCB] px-5 py-3  hover:bg-gray-300 hover:text-[#FF624C] duration-300 cursor-pointer">
+                            SmartFit Watch
+                          </li>
+                          <li className=" px-5 py-3  hover:bg-gray-300 hover:text-[#FF624C] duration-300 cursor-pointer">
+                            Pure Blender
+                          </li>
+                        </ul>
+                      </div>
+                    )}
+                  </button>
+                </li>
+                <li>
+                  <Link to={"/blog"}>Blog</Link>
+                </li>
+                <li>
+                  <Link to={"/contact"}>Contact</Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <ul className="flex items-center gap-x-20 font-['Montserrat'] font-bold text-base text-[#FFFFFF] leading-6">
+                <li>
+                  <Link to={"#"}>LIMITED SALE 👋🏻</Link>
+                </li>
+                <li>
+                  <Link to={"#"}>Best Seller</Link>
+                </li>
+                <li>
+                  <Link to={"#"}>New Arrival</Link>
+                </li>
+              </ul>
+            </div>
+          </Flex>
+        </Container>
+      </div>
+
+      {/* =============== responsive part =============== */}
+      {sideBar && (
+        <div className="block sm:hidden">
+          <div className="w-full h-screen fixed top-0 left-0 bg-white rounded z-10 shadow-lg">
+            <IoMdClose
+              onClick={handleHideSideBar}
+              className="absolute top-[5px] right-[18px] text-2xl hover:text-[#FF624C] duration-300 cursor-pointe"
+            />
+            <ul className="font-['Montserrat'] font-normal text-base text-[#000000] leading-6 text-left  mt-8">
+              <li className="border-b border-[#CBCBCB] px-5 py-3  hover:bg-gray-300 hover:text-[#FF624C] duration-300 cursor-pointer">
+                Electronics
               </li>
-              <li className="relative" ref={dropDownRef}>
-                <button
-                  onClick={handleDropDownClick}
-                  className="flex items-center gap-x-2 cursor-pointer"
-                >
-                  Products
-                  <FaAngleDown className="size-4 " />
-                  {isDroDownOpen && (
-                    <div className="w-48 absolute mt-2 top-[20px] left-0 bg-white rounded z-10 shadow-lg ">
-                      <ul className="font-['Montserrat'] font-normal text-base text-[#000000] leading-6 text-left">
-                        <li className="border-b border-[#CBCBCB] px-5 py-3  hover:bg-gray-300 hover:text-[#FF624C] duration-300 cursor-pointer">
-                        <Link to={'/product-list'}> All Products</Link>
-                        </li>
-                        <li className="border-b border-[#CBCBCB] px-5 py-3  hover:bg-gray-300 hover:text-[#FF624C] duration-300 cursor-pointer">
-                          EcoBreeze Purifier
-                        </li>
-                        <li className="border-b border-[#CBCBCB] px-5 py-3  hover:bg-gray-300 hover:text-[#FF624C] duration-300 cursor-pointer">
-                          SwiftCharge
-                        </li>
-                        <li className="border-b border-[#CBCBCB] px-5 py-3  hover:bg-gray-300 hover:text-[#FF624C] duration-300 cursor-pointer">
-                          SmartFit Watch
-                        </li>
-                        <li className=" px-5 py-3  hover:bg-gray-300 hover:text-[#FF624C] duration-300 cursor-pointer">
-                          Pure Blender
-                        </li>
-                      </ul>
-                    </div>
-                  )}
-                </button>
+              <li className="border-b border-[#CBCBCB] px-5 py-3  hover:bg-gray-300 hover:text-[#FF624C] duration-300 cursor-pointer">
+                Home Appliances
               </li>
-              <li>
-                <Link to={"/blog"}>Blog</Link>
+              <li className="border-b border-[#CBCBCB] px-5 py-3  hover:bg-gray-300 hover:text-[#FF624C] duration-300 cursor-pointer">
+                Fashion & Clothing
               </li>
-              <li>
-                <Link to={"/contact"}>Contact</Link>
+              <li className="border-b border-[#CBCBCB] px-5 py-3  hover:bg-gray-300 hover:text-[#FF624C] duration-300 cursor-pointer">
+                Sports & Outdoors
+              </li>
+              <li className=" px-5 py-3  hover:bg-gray-300 border-b border-[#CBCBCB]  hover:text-[#FF624C] duration-300 cursor-pointer">
+                Health & Beauty
+              </li>
+            </ul>
+            <ul className="font-['Montserrat'] font-normal text-base text-[#000000] leading-6 text-left">
+              <li className="border-b border-[#CBCBCB] px-5 py-3  hover:bg-gray-300 hover:text-[#FF624C] duration-300 cursor-pointer">
+                Electronics
+              </li>
+              <li className="border-b border-[#CBCBCB] px-5 py-3  hover:bg-gray-300 hover:text-[#FF624C] duration-300 cursor-pointer">
+                Home Appliances
+              </li>
+              <li className="border-b border-[#CBCBCB] px-5 py-3  hover:bg-gray-300 hover:text-[#FF624C] duration-300 cursor-pointer">
+                Fashion & Clothing
+              </li>
+              <li className="border-b border-[#CBCBCB] px-5 py-3  hover:bg-gray-300 hover:text-[#FF624C] duration-300 cursor-pointer">
+                Sports & Outdoors
+              </li>
+              <li className=" px-5 py-3  hover:bg-gray-300 border-b border-[#CBCBCB]  hover:text-[#FF624C] duration-300 cursor-pointer">
+                Health & Beauty
               </li>
             </ul>
           </div>
-          <div>
-            <ul className="flex items-center gap-x-20 font-['Montserrat'] font-bold text-base text-[#FFFFFF] leading-6">
-              <li>
-                <Link to={"#"}>LIMITED SALE 👋🏻</Link>
-              </li>
-              <li>
-                <Link to={"#"}>Best Seller</Link>
-              </li>
-              <li>
-                <Link to={"#"}>New Arrival</Link>
-              </li>
-            </ul>
-          </div>
-        </Flex>
-      </Container>
-    </div>
+        </div>
+      )}
+      {/* =============== responsive part =============== */}
+    </>
   );
 };
 

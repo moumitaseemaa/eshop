@@ -3,10 +3,10 @@ import Container from "../components/commonLayouts/Container";
 
 const Banner = () => {
   return (
-    <div className="mt-[32px] mb-20">
+    <div className="sm:mt-[32px] sm:mb-20 mb-12">
       <Container>
         <Link to={"/"}>
-        <img src="images/banner.png" alt="banner" />
+        <img className="w-[98%] px-2 sm:px-0 sm:w-full " src="images/banner.png" alt="banner" />
         </Link>
       </Container>
     </div>

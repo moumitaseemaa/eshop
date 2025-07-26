@@ -6,12 +6,12 @@ import TopRightBar from "./topComponent/TopRightBar";
 
 const TopBar = () => {
   return (
-    <div className=" border-b border-[#BFBFBF] border-solid">
+    <div className=" border-b border-[#CBCBCB] border-solid">
       <Container>
-        <Flex className={"justify-between items-center py-[22px] font-['Montserrat'] font-normal text-sm"}>
+        <div className={"sm:flex sm:justify-between sm:items-center py-[22px] font-['Montserrat'] font-normal text-sm"}>
           <TopLeftBar />
           <TopRightBar />
-        </Flex>
+        </div>
       </Container>
     </div>
   );

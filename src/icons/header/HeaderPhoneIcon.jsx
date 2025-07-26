@@ -1,6 +1,7 @@
-const HeaderPhoneIcon = ({ width = 16, height = 16, color = "#303030" }) => {
+const HeaderPhoneIcon = ({ width = 16, height = 16, color = "#303030",className }) => {
   return (
     <svg
+      className={className}
       width={width}
       height={height}
       viewBox="0 0 16 16"
