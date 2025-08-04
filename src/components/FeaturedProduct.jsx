@@ -66,26 +66,34 @@ const FeaturedProduct = () => {
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 500,
+    // autoplay: true,
+    // autoplaySpeed: 500,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
+    responsive: [
+      {
+        breakpoint: 415,
+        settings: {
+          slidesToShow: 1,
+        }
+      }
+    ]
   };
 
   return (
-    <div className="mb-20">
+    <div className="mb-20 px-2 sm:px-0">
       <Container>
-        <Flex className="justify-between items-center mb-12">
-          <h2 className="font-['Poppins'] font-semibold text-4xl leading-[46px] text-[#303030]">
+        <div className="sm:flex sm:justify-between sm:items-center mb-12">
+          <h2 className="font-['Poppins'] font-semibold text-4xl leading-[46px] text-[#303030] mb-4 sm:mb-0">
             Featured Products
           </h2>
-          <Flex className="justify-between items-center gap-x-4">
+          <div className="flex sm:justify-between items-center gap-x-4">
             <p className="font-['Montserrat'] font-bold text-base text-[#FF624C] leading-6 cursor-pointer">
               View All
             </p>
             <LongLeftArrow />
-          </Flex>
-        </Flex>
+          </div>
+        </div>
         <div className="max-w-[1440px] mx-auto">
           <Slider {...settings} className="feature_product">
             <div className="285px">

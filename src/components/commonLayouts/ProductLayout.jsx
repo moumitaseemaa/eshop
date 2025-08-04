@@ -27,10 +27,10 @@ const ProductLayout = ({
 
   return (
     <div
-   
-      className={` flex flex-col bg-white p-6  rounded-[10px] duration-300 group border border-transparent 
+
+      className={` flex flex-col bg-white p-6  rounded-[10px] duration-300 group border sm:border-transparent 
         ${springPadding && `p-10`}
-        ${springBorder && `hover:border hover:border-[#CBCBCB]`}
+        ${springBorder && `hover:border border-[#CBCBCB] sm:hover:border-[#CBCBCB]`}
         ${springCardBg ? "hover:bg-[#EAEAEA]" : ""}
         `}
     >
@@ -51,9 +51,11 @@ const ProductLayout = ({
             {discount}%
           </div>
         )}
+
+        {/* Hover Icon  */}
         <Flex
           className={
-            " flex items-center justify-center gap-x-[18px] absolute bottom-[6px] left-[47%] -translate-x-1/2 scale-0 group-hover:scale-100"
+            " flex items-center justify-center gap-x-[18px] absolute bottom-[6px] left-[47%] -translate-x-1/2 sm:scale-0 scale-100 sm:group-hover:scale-100"
           }
         >
           <div className="icon size-[50px] bg-white border border-[#FF624C] rounded-full flex items-center justify-center hover:bg-[#FF624C] hover:text-white duration-300 cursor-pointer ">
@@ -71,6 +73,7 @@ const ProductLayout = ({
             <ShareIcon />
           </div>
         </Flex>
+        {/* Hover Icon  */}
       </div>
       <div>
         <p className="font-['Montserrat'] font-normal text-sm uppercase tracking-[5px] mt-10">
